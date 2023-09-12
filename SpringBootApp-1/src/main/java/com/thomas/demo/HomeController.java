@@ -12,12 +12,12 @@ import jakarta.servlet.http.HttpSession;
 public class HomeController {
 	
 	@RequestMapping("/home")
-	public ModelAndView home(@RequestParam("name") String myName) {
+	public ModelAndView home(Alien alien) {
 
 		
 		ModelAndView mv = new ModelAndView();
 		
-		mv.addObject("name",myName);
+		mv.addObject("alien",alien);
 		mv.setViewName("home");
 		return mv;
 	}
